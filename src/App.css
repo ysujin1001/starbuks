@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+/* 페이지를 백지로 만들고 시작 */
+body,
+#root {
+  margin: 0px;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* 이미지 옆에 다른 header 나오게 
+header 구분선
+맨 처음 모든 값의 margin을 0으로 주고 시작해서 오른쪽 여백에 10px 줌*/
+header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-bottom: 1px solid rgb(220, 220, 220);
+  margin: 0px 10px;
 }
 
-.App-link {
-  color: #61dafb;
+header > div {
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* header의 li들이 가로로 보이게 (ul 안에 있는 li들이라서 ul로) */
+header ul {
+  display: flex;
+}
+
+header a {
+  color: rgb(85, 85, 85);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+.sub-header {
+  width: 100%;
+}
+
+.header-ul {
+  justify-content: end;
+  list-style: none;
+  gap: 7px;
+}
+/* 요소에 대해서 왼쪽 정렬
+이것처럼 main/sub 각각으로 해도 되고,
+위처럼 .header-ul 로 묶어서 한번에 해도 됨
+.sub-header > ul {
+  justify-content: end;
+}
+.main-header > ul {
+  justify-content: end;
+}
+*/
+
+.main-header a {
+  text-transform: uppercase;
 }
